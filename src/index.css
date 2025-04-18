@@ -9,6 +9,16 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 .glitch {
   position: relative;
   color: #ff00cc;

@@ -205,6 +205,13 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    document.body.className = darkMode ? "light-mode" : "dark-mode";
+  };
+
   return (
     <Router>
       <div className="min-h-screen font-mono text-white bg-dark">
@@ -213,6 +220,9 @@ function App() {
           <AnimatedRoutes />
         </div>
         <Footer />
+        <button onClick={toggleTheme}>
+          {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
       </div>
     </Router>
   )
