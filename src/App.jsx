@@ -132,6 +132,11 @@ function About() {
     <PageWrapper>
       <div className="max-w-3xl px-6 py-16 mx-auto">
         <h2 className="mb-8 text-3xl font-bold text-magenta">About Me</h2>
+        <img 
+          src="/Users/razvanpaleacu/Downloads/razvan-portfolio111/public/IMG_7022.JPG" 
+          alt="About Me" 
+          className="mb-8 rounded-lg shadow-lg"
+        />
         <p className="text-gray-400">I'm a marketer who thrives in Web3. I specialize in building powerful narratives and communities for crypto startups, combining data-driven strategy with strong aesthetic vibes.</p>
       </div>
     </PageWrapper>
