@@ -132,11 +132,17 @@ function About() {
     <PageWrapper>
       <div className="max-w-3xl px-6 py-16 mx-auto">
         <h2 className="mb-8 text-3xl font-bold text-magenta">About Me</h2>
+        <img 
+          src="/IMG_7022.JPG" 
+          alt="About Me" 
+          className="mb-8 rounded-lg shadow-lg"
+        />
         <p className="text-gray-400">I'm a marketer who thrives in Web3. I specialize in building powerful narratives and communities for crypto startups, combining data-driven strategy with strong aesthetic vibes.</p>
       </div>
     </PageWrapper>
   )
 }
+
 
 function Resources() {
   return (
@@ -205,14 +211,25 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
 
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    document.body.className = darkMode ? "light-mode" : "dark-mode";
-  };
-
-  
+  return (
+    <div className={darkMode ? 'dark' : 'light'}>
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="fixed z-50 p-2 text-white bg-gray-800 rounded shadow-lg top-4 right-4"
+      >
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+      <div className="min-h-screen text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white">
+        <Navbar />
+        <div className="pt-20">
+          <AnimatedRoutes />
+        </div>
+        <Footer />
+      </div>
+    </div>
+  )
 }
 
 export default App
