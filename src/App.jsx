@@ -211,16 +211,24 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false)
+
   return (
-    <Router>
-      <div className="min-h-screen font-mono text-white bg-dark">
+    <div className={darkMode ? 'dark' : 'light'}>
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="fixed z-50 p-2 text-white bg-gray-800 rounded shadow-lg top-4 right-4"
+      >
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+      <div className="min-h-screen text-black transition-colors duration-300 bg-white dark:bg-black dark:text-white">
         <Navbar />
         <div className="pt-20">
           <AnimatedRoutes />
         </div>
         <Footer />
       </div>
-    </Router>
+    </div>
   )
 }
 

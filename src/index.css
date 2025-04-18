@@ -4,6 +4,9 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .glitch {
@@ -54,4 +57,14 @@ body {
     clip-path: inset(30% 0 0 0);
     transform: translate(0, 0);
   }
+}
+
+.light {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark {
+  --bg-color: black;
+  --text-color: white;
 }
