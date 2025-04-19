@@ -332,14 +332,14 @@ function Contact() {
       <div className="max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-16">
         <h2 className="mb-5 text-2xl font-bold sm:mb-6 sm:text-3xl text-magenta">Contact</h2>
         <p className="mb-6 text-sm text-gray-600 dark:text-gray-400 sm:text-base leading-relaxed">
-          Reach me at <a href="mailto:hello@razvancrypto.xyz" className="underline text-magenta hover:text-opacity-80 transition-colors">hello@razvancrypto.xyz</a>
+          Reach me at <a href="mailto:razvan.paleacu@gmail.com" className="underline text-magenta hover:text-opacity-80 transition-colors">razvan.paleacu@gmail.com</a>
         </p>
 
         <div className="mb-8 p-4 sm:p-6 border border-magenta rounded-lg bg-white bg-opacity-50 dark:bg-dark dark:bg-opacity-50">
           <h3 className="mb-3 text-lg font-medium text-magenta">Connect With Me</h3>
           <div className="flex flex-wrap gap-4 text-sm">
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/razvanp157" 
               className="flex items-center px-4 py-2 transition border rounded-md text-magenta border-magenta hover:bg-magenta hover:text-white"
               target="_blank" 
               rel="noopener noreferrer"
@@ -350,7 +350,7 @@ function Contact() {
               Twitter
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/razvan-paleacu-811336229/" 
               className="flex items-center px-4 py-2 transition border rounded-md text-magenta border-magenta hover:bg-magenta hover:text-white"
               target="_blank" 
               rel="noopener noreferrer"
@@ -361,7 +361,7 @@ function Contact() {
               LinkedIn
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/razvanpaleacu" 
               className="flex items-center px-4 py-2 transition border rounded-md text-magenta border-magenta hover:bg-magenta hover:text-white"
               target="_blank" 
               rel="noopener noreferrer"
