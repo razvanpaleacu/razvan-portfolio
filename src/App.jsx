@@ -87,7 +87,7 @@ function Home() {
           Personal Portfolio
         </h1>
         <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-          Creative crypto marketing specialist helping Web3 brands grow through strategy, content & community.
+          15-year-old competitive athlete from Timisoara with a passion for athletics and UFC. Explore my journey, achievements, and interests.
         </p>
         <div className="mt-8 sm:mt-12">
           <Link 
@@ -127,9 +127,118 @@ function About() {
     <PageWrapper>
       <div className="max-w-3xl px-4 py-12 mx-auto sm:px-6 sm:py-16">
         <h2 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl text-magenta">About Me</h2>
-        <p className="mb-6 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-          I'm a marketer who thrives in Web3. I specialize in building powerful narratives and communities for crypto startups.
+        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
+          My name is Razvan Paleacu Ionut, and I'm a 15-year-old from Timisoara. I'm passionate about competitive athletics and enjoy watching UFC in my free time.
         </p>
+        <p className="mb-6 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
+          As a dedicated athlete, I strive for excellence in everything I do. My journey in athletics has taught me discipline, perseverance, and the importance of continuous improvement.
+        </p>
+
+        <div className="mb-8 p-5 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm">
+          <h3 className="mb-4 text-xl font-semibold text-magenta">My Interests & Skills</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 p-2 bg-magenta bg-opacity-10 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">Athletics</h4>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Competitive training and participation in athletic events</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 p-2 bg-magenta bg-opacity-10 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">UFC</h4>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Following and analyzing mixed martial arts competitions</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 p-2 bg-magenta bg-opacity-10 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">Learning</h4>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Constantly improving my skills and knowledge</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 p-2 bg-magenta bg-opacity-10 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">Teamwork</h4>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Collaborating effectively with others</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="mb-4 text-xl font-semibold text-magenta">My Athletic Journey</h3>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 shadow-sm">
+            <div className="space-y-4">
+              <div className="border-l-4 border-magenta pl-4 py-1">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">Achievements</h4>
+                <ul className="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Participated in regional athletics competitions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Improved personal records in running events</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Trained with experienced coaches to refine technique</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="border-l-4 border-magenta pl-4 py-1">
+                <h4 className="text-base font-medium text-gray-800 dark:text-gray-200">Future Goals</h4>
+                <ul className="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Qualify for national athletics championships</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Develop specialized skills in my preferred athletic events</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-magenta mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span>Inspire other young athletes to pursue their dreams</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-6">
           <a 
             href="/resume.pdf" 
@@ -143,7 +252,8 @@ function About() {
           </a>
         </div>
         <div className="mt-8">
-          <h3 className="mb-4 text-xl font-semibold text-magenta">Photo Gallery</h3>
+          <h3 className="mb-2 text-xl font-semibold text-magenta">My Photo Gallery</h3>
+          <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">A glimpse into my athletic journey and personal moments. Click on any image to view it in full size.</p>
           <div className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
             {galleryImages.map((image, index) => (
               <div 
