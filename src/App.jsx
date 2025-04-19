@@ -106,8 +106,11 @@ function Projects() {
 function Home() {
   return (
     <PageWrapper>
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
-        <h1 className="mb-4 text-5xl font-bold md:text-6xl"><GlitchText text="Razvan" /></h1>
+      <div className="flex flex-col items-center justify-start min-h-screen px-4 pt-32 text-center">
+        <h1 className="mb-6 text-5xl font-bold leading-tight text-magenta md:text-6xl">
+  Razvan Paleacu's<br />
+  Personal Portfolio
+</h1>
         <p className="max-w-xl text-lg text-gray-400 md:text-xl">Creative crypto marketing specialist helping Web3 brands grow through strategy, content & community.</p>
       </div>
     </PageWrapper>
@@ -116,13 +119,23 @@ function Home() {
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 border-b bg-dark backdrop-blur-sm border-magenta">
-      <Link to="/" className="text-xl font-bold text-magenta">Razvan</Link>
-      <div className="space-x-4">
-        <Link to="/" className="text-gray-300 transition hover:text-magenta">Home</Link>
-        <Link to="/projects" className="text-gray-300 transition hover:text-magenta">Projects</Link>
-        <Link to="/about" className="text-gray-300 transition hover:text-magenta">About</Link>
-        <Link to="/contact" className="text-gray-300 transition hover:text-magenta">Contact</Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-6 py-4 border-b bg-dark backdrop-blur-sm border-magenta">
+      <div className="flex items-center justify-center space-x-6">
+        {[
+          { path: '/', label: 'Home' },
+          { path: '/projects', label: 'Projects' },
+          { path: '/about', label: 'About' },
+          { path: '/contact', label: 'Contact' },
+        ].map(({ path, label }) => (
+          <Link
+            key={label}
+            to={path}
+            className="relative inline-block text-gray-300 transition group hover:text-magenta"
+          >
+            <span>{label}</span>
+            <span className="absolute left-0 right-0 h-1 transition-transform duration-300 origin-left scale-x-0 rounded-full -bottom-1 bg-magenta group-hover:scale-x-100"></span>
+          </Link>
+        ))}
       </div>
     </nav>
   )
