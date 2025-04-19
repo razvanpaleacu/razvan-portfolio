@@ -36,6 +36,7 @@ function About() {
       <div className="max-w-3xl px-6 py-16 mx-auto">
         <h2 className="mb-8 text-3xl font-bold text-magenta">About Me</h2>
         <p className="text-gray-400">I'm a marketer who thrives in Web3. I specialize in building powerful narratives and communities for crypto startups, combining data-driven strategy with strong aesthetic vibes.</p>
+        <img src="/IMG_7022.JPG" alt="About" className="w-full mb-8 shadow-lg rounded-2xl" />
       </div>
     </PageWrapper>
   )
