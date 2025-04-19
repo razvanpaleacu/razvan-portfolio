@@ -17,6 +17,8 @@ function PageWrapper({ children }) {
 }
 
 function Navbar({ toggleTheme, theme }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white border-b dark:bg-dark backdrop-blur-sm border-magenta">
       <button
@@ -25,7 +27,15 @@ function Navbar({ toggleTheme, theme }) {
       >
         {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
       </button>
-      <div className="flex items-center justify-center space-x-6">
+      <div className="md:hidden">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-magenta focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+      <div className={`absolute md:static top-16 right-6 md:right-auto md:top-auto bg-white dark:bg-dark md:bg-transparent md:dark:bg-transparent border md:border-none rounded md:flex md:space-x-6 space-y-2 md:space-y-0 px-6 py-4 md:p-0 ${menuOpen ? 'block' : 'hidden'} md:block`}> 
         {[
           { path: '/', label: 'Home' },
           { path: '/projects', label: 'Projects' },
@@ -35,10 +45,11 @@ function Navbar({ toggleTheme, theme }) {
           <Link
             key={label}
             to={path}
-            className="relative inline-block text-gray-800 transition group dark:text-gray-300 hover:text-magenta"
+            className="relative block text-gray-800 transition md:inline-block group dark:text-gray-300 hover:text-magenta"
+            onClick={() => setMenuOpen(false)}
           >
             <span>{label}</span>
-            <span className="absolute left-0 right-0 h-1 transition-transform duration-300 origin-left scale-x-0 rounded-full -bottom-1 bg-magenta group-hover:scale-x-100"></span>
+            <span className="absolute left-0 right-0 hidden h-1 transition-transform duration-300 origin-left scale-x-0 rounded-full md:block -bottom-1 bg-magenta group-hover:scale-x-100"></span>
           </Link>
         ))}
       </div>
@@ -50,11 +61,11 @@ function Home() {
   return (
     <PageWrapper>
       <div className="flex flex-col items-center justify-start min-h-screen px-4 pt-32 text-center">
-        <h1 className="mb-6 text-5xl font-bold leading-tight text-magenta md:text-6xl">
+        <h1 className="mb-6 text-3xl font-bold leading-tight sm:text-5xl text-magenta">
           Razvan Paleacu's<br />
           Personal Portfolio
         </h1>
-        <p className="max-w-xl text-lg text-gray-600 dark:text-gray-400 md:text-xl">
+        <p className="max-w-xl text-base text-gray-600 sm:text-lg dark:text-gray-400">
           Creative crypto marketing specialist helping Web3 brands grow through strategy, content & community.
         </p>
       </div>
@@ -65,12 +76,12 @@ function Home() {
 function About() {
   return (
     <PageWrapper>
-      <div className="max-w-3xl px-6 py-16 mx-auto">
-        <h2 className="mb-8 text-3xl font-bold text-magenta">About Me</h2>
-        <p className="mb-6 text-gray-600 dark:text-gray-400">
+      <div className="max-w-3xl px-4 py-12 mx-auto sm:px-6 sm:py-16">
+        <h2 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl text-magenta">About Me</h2>
+        <p className="mb-6 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
           I'm a marketer who thrives in Web3. I specialize in building powerful narratives and communities for crypto startups.
         </p>
-        <img src="/IMG_7022.JPG" alt="About" className="w-full shadow-lg rounded-2xl" />
+        <img src="/IMG_7022.JPG" alt="About" className="w-full rounded-xl shadow-lg max-h-[400px] object-cover" />
       </div>
     </PageWrapper>
   )
@@ -79,12 +90,12 @@ function About() {
 function Contact() {
   return (
     <PageWrapper>
-      <div className="max-w-3xl px-6 py-16 mx-auto">
-        <h2 className="mb-8 text-3xl font-bold text-magenta">Contact</h2>
-        <p className="mb-4 text-gray-600 dark:text-gray-400">
+      <div className="max-w-3xl px-4 py-12 mx-auto sm:px-6 sm:py-16">
+        <h2 className="mb-6 text-2xl font-bold sm:text-3xl text-magenta">Contact</h2>
+        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
           Reach me at <a href="mailto:hello@razvancrypto.xyz" className="underline text-magenta">hello@razvancrypto.xyz</a>
         </p>
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 text-sm">
           <a href="https://twitter.com" className="transition hover:text-magenta">Twitter</a>
           <a href="https://linkedin.com" className="transition hover:text-magenta">LinkedIn</a>
           <a href="https://github.com" className="transition hover:text-magenta">GitHub</a>
@@ -122,9 +133,8 @@ function Projects() {
 
   return (
     <PageWrapper>
-      <div className="max-w-5xl px-6 py-16 mx-auto">
-        <h2 className="mb-8 text-3xl font-bold text-magenta">Projects</h2>
-
+      <div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 sm:py-16">
+        <h2 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl text-magenta">Projects</h2>
         <div className="flex flex-wrap gap-3 mb-10">
           {["All", "DePIN", "AI", "Infra"].map(tag => (
             <button
@@ -140,19 +150,18 @@ function Projects() {
             </button>
           ))}
         </div>
-
         <motion.div layout className="grid gap-6 sm:grid-cols-2">
           {filtered.map((project, i) => (
             <motion.div
               key={i}
               layout
-              className="p-6 transition-transform duration-300 border bg-white dark:bg-dark border-magenta rounded-2xl hover:scale-[1.02]"
+              className="p-4 sm:p-6 transition-transform duration-300 border bg-white dark:bg-dark border-magenta rounded-2xl hover:scale-[1.02]"
             >
               <div className="flex justify-center mb-4">
-                <img src={project.logo} alt={project.title} className="h-16" />
+                <img src={project.logo} alt={project.title} className="h-12 sm:h-16" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-magenta">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+              <h3 className="mb-2 text-lg font-semibold sm:text-xl text-magenta">{project.title}</h3>
+              <p className="text-sm text-gray-600 sm:text-base dark:text-gray-400">{project.description}</p>
               <span className="inline-block px-3 py-1 mt-4 text-xs border rounded-full text-magenta border-magenta">
                 {project.tag}
               </span>
@@ -166,7 +175,7 @@ function Projects() {
 
 function Footer() {
   return (
-    <footer className="px-6 py-8 mt-16 text-center border-t border-magenta">
+    <footer className="px-6 py-8 mt-16 text-sm text-center border-t border-magenta">
       <p className="text-gray-500">&copy; 2025 Razvan. Built for the Web3 era.</p>
     </footer>
   )
